@@ -17,6 +17,7 @@ import modules.icons as icons
 from modules.kanban import Kanban
 from modules.mixer import Mixer
 from modules.pins import Pins
+from modules.tracker import Tracker
 from modules.wallpapers import WallpaperSelector
 from modules.widgets import Widgets
 
@@ -39,6 +40,7 @@ class Dashboard(Box):
         self.widgets = Widgets(notch=self.notch)
         self.pins = Pins()
         self.kanban = Kanban()
+        self.tracker = Tracker()
         self.wallpapers = WallpaperSelector()
         self.mixer = Mixer()
 
@@ -60,6 +62,7 @@ class Dashboard(Box):
         )
 
         self.stack.add_titled(self.widgets, "widgets", "Widgets")
+        self.stack.add_titled(self.tracker, "tracker", "Tracker")
         self.stack.add_titled(self.pins, "pins", "Pins")
         self.stack.add_titled(self.kanban, "kanban", "Kanban")
         self.stack.add_titled(self.wallpapers, "wallpapers", "Wallpapers")
@@ -93,6 +96,7 @@ class Dashboard(Box):
             "Widgets": {"icon": icons.widgets, "name": "widgets"},
             "Pins": {"icon": icons.pins, "name": "pins"},
             "Kanban": {"icon": icons.kanban, "name": "kanban"},
+            "Tracker": {"icon": icons.timer_on, "name": "tracker"},
             "Wallpapers": {"icon": icons.wallpapers, "name": "wallpapers"},
             "Mixer": {"icon": icons.speaker, "name": "mixer"},
         }
@@ -152,6 +156,8 @@ class Dashboard(Box):
             self.stack.set_visible_child(self.pins)
         elif section_name == "kanban":
             self.stack.set_visible_child(self.kanban)
+        elif section_name == "tracker":
+            self.stack.set_visible_child(self.tracker)
         elif section_name == "wallpapers":
             self.stack.set_visible_child(self.wallpapers)
         elif section_name == "mixer":

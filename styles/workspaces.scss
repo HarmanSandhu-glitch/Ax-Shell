@@ -1,0 +1,102 @@
+#workspaces {
+  padding: $spacing-md;
+}
+
+#workspaces-num {
+  padding: $spacing-xs;
+}
+
+#workspaces-container {
+  background-color: $shadow;
+}
+
+#workspaces-container.invert {
+  background-color: $surface;
+  border-radius: $radius-md;
+}
+
+#workspaces>button {
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: $radius-lg;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1 ;
+  background-color: $foreground;
+}
+
+#workspaces>button>label {
+  font-size: 0px;
+}
+
+#workspaces>button.empty:hover {
+  background-color: $foreground;
+}
+
+#workspaces>button.urgent {
+  background-color: $error-dim;
+}
+
+#workspaces>button.active {
+  min-width: 48px;
+  min-height: 8px;
+  background-color: $primary;
+}
+
+#workspaces>button.active.vertical {
+  min-width: 8px;
+  min-height: 48px;
+  background-color: $primary;
+}
+
+#workspaces>button.empty {
+  background-color: $surface-bright;
+}
+
+#workspaces-num>button>label {
+  color: $foreground;
+}
+
+#workspaces-num {
+  padding: $spacing-sm;
+}
+
+#workspaces-num>button {
+  border-radius: $radius-xl;
+  /* transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275 ; */
+}
+
+#workspaces-num>button>label {
+  color: $foreground;
+  font-weight: bold;
+  min-width: 20px;
+  min-height: 20px;
+  font-size: 10pt;
+}
+
+#workspaces-num>button:hover {
+  background-color: $surface-bright;
+}
+
+#workspaces-num>button.active {
+  background-color: $primary;
+  border-radius: $radius-sm;
+}
+
+#workspaces-num>button.active>label {
+  color: $shadow;
+}
+
+#workspaces-num>button.empty>label {
+  color: $surface-bright;
+}
+
+#workspaces-num>button.empty:hover>label {
+  color: $foreground;
+}
+
+#workspaces-num>button.empty:hover {
+  background-color: transparent;
+}
+
+#workspaces-num>button.urgent>label {
+  color: $error-dim;
+}

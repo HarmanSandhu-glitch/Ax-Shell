@@ -1,0 +1,116 @@
+#calendar {
+  /* background-color: $shadow; */
+
+  background-color: unquote("alpha($secondary, 0.5)") ;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 2px 4px unquote("alpha($shadow, 0.3)") ;
+  border-radius: $radius-pill;
+  /* border-radius: 8px; */
+  padding: $spacing-xs $spacing-xs $spacing-xs $spacing-xl;
+  border-radius: $radius-xl;
+  /* border: 4px solid $surface; */
+  padding: $spacing-xs;
+}
+
+#header {
+  /* background-color: $shadow; */
+  background-color: unquote("alpha($primary, 0.9)") ;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 2px 4px unquote("alpha($shadow, 0.3)") ;
+  border-radius: $radius-pill;
+  /* border-radius: 8px; */
+  padding: $spacing-xs $spacing-xs $spacing-xs $spacing-xl;
+  /* border-radius: 12px; */
+  /* border: 1px solid $surface; */
+  padding: $spacing-xs;
+}
+
+#weekday-row {
+  background-color: unquote("alpha($secondary, 0.1)") ;
+  border: 1px solid unquote("alpha($outline, 0.1)") ;
+  box-shadow: 0 2px 4px unquote("alpha($shadow, 0.3)") ;
+  border-radius: $radius-pill;
+  /* border-radius: 8px; */
+  padding: $spacing-xs $spacing-xs $spacing-xs $spacing-xl;
+  background-color: $surface;
+  /* border-radius: 8px; */
+  padding: $spacing-xs;
+}
+
+#month-label,
+#weekday-label,
+#day-label {
+  font-weight: bold;
+}
+
+#day-label,
+#day-empty {
+  min-width: 32px;
+  min-height: 32px;
+  font-size: 9pt;
+}
+
+#day-empty {
+  color: $surface-bright;
+}
+
+#weekday-label {
+  color: $primary;
+  font-size: 9pt;
+}
+
+#calendar-grid {
+  background-color: unquote("alpha($secondary, 0.1)") ;
+  border: 1px solid unquote("alpha($outline, 0.1)") ;
+  box-shadow: 0 2px 4px unquote("alpha($shadow, 0.3)") ;
+  border-radius: $radius-pill;
+  /* border-radius: 8px; */
+  /* padding: 3px 4px 3px 20px; */
+  border-radius: $radius-lg;
+  padding: $spacing-xs;
+}
+
+#day-label.current-day {
+  /* background-color: unquote("alpha($secondary, 0.1)") ; */
+  border: 1px solid unquote("alpha($outline, 0.1)") ;
+  box-shadow: 0 2px 4px unquote("alpha($shadow, 0.3)") ;
+  border-radius: $radius-pill;
+  /* border-radius: 8px; */
+  /* padding: 3px 4px 3px 20px; */
+  background-color: $foreground;
+  color: $shadow;
+  border-radius: $radius-xl;
+}
+
+#prev-month-button,
+#next-month-button {
+  background-color: unquote("alpha($secondary, 0.1)") ;
+  border: 1px solid unquote("alpha($outline, 0.1)") ;
+  box-shadow: 0 2px 4px unquote("alpha($shadow, 0.3)") ;
+  border-radius: $radius-pill;
+  /* border-radius: 8px; */
+  padding: $spacing-xs $spacing-xs $spacing-xs $spacing-xl;
+  background-color: $surface;
+  /* border-radius: 8px; */
+  padding: $spacing-xs;
+}
+
+#prev-month-button:hover,
+#next-month-button:hover {
+  background-color: $surface-bright;
+}
+
+#prev-month-button:active,
+#next-month-button:active {
+  background-color: $primary;
+}
+
+#month-button-label {
+  color: $primary;
+  font-size: 20px;
+}
+
+#prev-month-button:active #month-button-label,
+#next-month-button:active #month-button-label {
+  color: $shadow;
+}

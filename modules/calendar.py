@@ -14,7 +14,7 @@ from gi.repository import GLib, Gtk, Gio
 
 class Calendar(Gtk.Box):
     def __init__(self, view_mode="month"):
-        super().__init__(orientation=Gtk.Orientation.VERTICAL, spacing=8, name="calendar")
+        super().__init__(orientation=Gtk.Orientation.VERTICAL, spacing=4, name="calendar")
         self.view_mode = view_mode
         self.first_weekday = 0  # Default: Monday, will be updated async
 

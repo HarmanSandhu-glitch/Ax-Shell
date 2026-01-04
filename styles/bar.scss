@@ -1,0 +1,229 @@
+#bar-inner,
+#bar-inner.pills {
+  margin: $spacing-sm;
+  opacity: 1;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275;
+  }
+
+  #bar-inner.dense,
+  #bar-inner.edge,
+  #bar-inner.edge.vertical,
+  #bar-inner.edgecenter.vertical {
+    padding: $spacing-xs;
+    background-color: $shadow;
+    border-style: solid;
+    border-color: $surface;
+  }
+
+  #bar-inner.dense {
+    border-width: 2px;
+  }
+
+  #bar-inner.edge {
+    border-width: 0 0 2px 0;
+    border-radius: 0;
+  }
+
+  /* #bar-inner.edge.vertical { */
+  /*   border-width: 0 2px 0 0; */
+  /*   border-radius: 0; */
+  /* } */
+
+  #bar-inner.edge.bottom {
+    border-width: 2px 0 0 0;
+    border-radius: 0;
+  }
+
+  #bar-inner.edge.vertical.right {
+    border-width: 0 0 0 2px;
+    border-radius: 0;
+  }
+
+  #bar-inner.edge.vertical.left {
+    border-width: 0 2px 0 0;
+    border-radius: 0;
+  }
+
+  #bar-inner.edgecenter.vertical {
+    border-width: 2px;
+    border-left-width: 0;
+    border-radius: 0 $radius-lg $radius-lg 0;
+  }
+
+  #bar-inner.edge.vertical.right {
+    border-width: 0 0 0 2px;
+    border-radius: 0;
+  }
+
+  #bar-inner.edgecenter.vertical.right {
+    border-width: 2px;
+    border-right-width: 0;
+    border-radius: $radius-lg 0 0 $radius-lg;
+  }
+
+  #bar-inner.hidden {
+    margin: $spacing-sm;
+    margin-top: -40px;
+    opacity: 0;
+  }
+
+  #date-time {
+    background-color: $shadow;
+    min-height: 36px;
+    padding: 0 $spacing-sm;
+  }
+
+  #date-time.vertical {
+    padding: $spacing-sm 0;
+  }
+
+  #date-time.invert {
+    background-color: $surface;
+    border-radius: $radius-md;
+  }
+
+  menu>menuitem>label,
+  #date-time>label {
+    font-weight: bold;
+  }
+
+  #language {
+    min-height: 36px;
+    background-color: $shadow;
+    padding: 0 $spacing-sm;
+  }
+
+  #language.invert {
+    background-color: $surface;
+    border-radius: $radius-md;
+  }
+
+  #lang-label {
+    font-weight: bold;
+  }
+
+  #lang-label.icon {
+    color: $primary;
+    font-size: 20px;
+  }
+
+  #weather {
+    background-color: $shadow;
+    padding: 0 $spacing-sm;
+    min-height: 36px;
+  }
+
+  #weather.invert {
+    background-color: $surface;
+    border-radius: $radius-md;
+  }
+
+  #weather-label {
+    font-weight: bold;
+  }
+
+  #systray {
+    background-color: $shadow;
+    padding: $spacing-sm;
+  }
+
+  #systray.invert {
+    background-color: $surface;
+    border-radius: $radius-md;
+  }
+
+  menu {
+    border: solid 1px;
+    border-radius: $radius-lg;
+    border-color: $surface;
+    background-color: $shadow;
+    padding: $spacing-sm;
+  }
+
+  menu>menuitem {
+    border-radius: $radius-md;
+    padding: $spacing-sm $spacing-md;
+  }
+
+  menu>menuitem:hover {
+    background-color: $primary;
+  }
+
+  menu>menuitem:hover>label {
+    color: $shadow;
+  }
+
+  tooltip {
+    border: solid 1px;
+    border-color: $surface;
+    background-color: $shadow;
+    animation: tooltipShow 0.25s cubic-bezier(0.5, 0.25, 0, 1;
+    }
+
+    @keyframes tooltipShow {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    tooltip>* {
+      padding: $spacing-sm $spacing-md;
+      border-radius: $radius-md;
+    }
+
+    #button-bar {
+      padding: $spacing-xs;
+      min-width: 28px;
+      min-height: 28px;
+      background-color: $shadow;
+      transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275;
+      }
+
+      #button-bar.invert {
+        background-color: $surface;
+        border-radius: $radius-md;
+      }
+
+      #button-bar-label {
+        color: $primary;
+        font-size: 20px;
+        padding: $spacing-xs;
+        border-radius: $radius-pill;
+        transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275;
+        }
+
+        #button-bar:hover #button-bar-label {
+          border-radius: $radius-md;
+          background-color: $surface_bright ;
+        }
+
+        #button-bar:active #button-bar-label {
+          border-radius: $radius-pill;
+          color: $shadow;
+          background-color: $primary;
+        }
+
+        #corner {
+          background-color: $shadow;
+          border-radius: 0;
+        }
+
+        #corner-container {
+          min-width: 20px;
+          min-height: 20px;
+        }
+
+        #button-corner {
+          border-radius: 0px;
+          min-width: 20px;
+          min-height: 20px;
+        }
+
+        #notch,
+        #bar {
+          border-radius: 0px;
+        }

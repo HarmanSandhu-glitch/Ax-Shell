@@ -1,0 +1,161 @@
+/* === Botones Base === */
+#network-button,
+#bluetooth-button,
+#night-mode-button,
+#caffeine-button {
+  background-color: unquote("alpha($secondary, 0.1)") ;
+  border: 1px solid unquote("alpha($outline, 0.1)") ;
+  /* box-shadow: 0 2px 4px unquote("alpha($shadow, 0.3)") ; */
+  background-color: $surface;
+  min-height: 52px;
+  border-radius: $radius-lg;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275 ;
+}
+
+/* Tamaños y estilos específicos */
+#network-button,
+#bluetooth-button {
+  background-color: unset;
+  padding: 0;
+}
+
+#night-mode-button,
+#caffeine-button {
+  background-color: $primary;
+  padding: 0 $spacing-md;
+}
+
+#night-mode-button.disabled,
+#caffeine-button.disabled {
+  background-color: $surface;
+  border-radius: $radius-pill;
+}
+
+/* Botones internos (status y menú  */
+#network-status-button,
+#network-menu-button,
+#bluetooth-status-button,
+#bluetooth-menu-button {
+  background-color: $primary;
+  padding: 0 $spacing-sm;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275 ;
+}
+
+#network-menu-button,
+#bluetooth-menu-button {
+  border-left: 1px solid $outline;
+  min-width: 24px;
+}
+
+/* Estados Hover para todos los botones relevantes */
+#network-status-button:hover,
+#network-menu-button:hover,
+#bluetooth-status-button:hover,
+#bluetooth-menu-button:hover,
+#bluetooth-button:hover,
+#night-mode-button:hover,
+#caffeine-button:hover {
+  background-color: $foreground;
+}
+
+#network-menu-button:active,
+#bluetooth-menu-button:active {
+  border-radius: 0 $radius-pill $radius-pill 0;
+}
+
+/* Estados Disabled */
+#network-status-button.disabled,
+#network-menu-button.disabled,
+#bluetooth-status-button.disabled,
+#bluetooth-menu-button.disabled {
+  background-color: $surface;
+  border-radius: $radius-pill 0 0 $radius-pill;
+}
+
+#network-menu-button.disabled,
+#bluetooth-menu-button.disabled {
+  border-left: 1px solid $surface-bright;
+  border-radius: 0 $radius-pill $radius-pill 0;
+}
+
+#network-status-button.disabled:hover,
+#network-menu-button.disabled:hover,
+#bluetooth-status-button.disabled:hover,
+#bluetooth-menu-button.disabled:hover,
+#night-mode-button.disabled:hover,
+#caffeine-button.disabled:hover {
+  background-color: $surface-bright;
+}
+
+/* Bordes diferenciados para botones compuestos */
+#network-status-button,
+#bluetooth-status-button {
+  border-radius: $radius-lg 0 0 $radius-lg;
+}
+
+#network-menu-button,
+#bluetooth-menu-button {
+  border-radius: 0 $radius-lg $radius-lg 0;
+}
+
+/* === Estilos de Iconos === */
+#network-icon,
+#bluetooth-icon,
+#night-mode-icon,
+#caffeine-icon {
+  color: $shadow;
+  font-size: 24px;
+}
+
+#network-icon.disabled,
+#bluetooth-icon.disabled,
+#night-mode-icon.disabled,
+#caffeine-icon.disabled {
+  color: $outline;
+}
+
+/* === Estilos de Etiquetas de Menú === */
+#network-menu-label,
+#bluetooth-menu-label {
+  color: $shadow;
+  font-size: 16px;
+}
+
+#network-menu-label.disabled,
+#bluetooth-menu-label.disabled {
+  color: $outline;
+}
+
+/* === Estilos de Etiquetas Principales === */
+#network-label,
+#bluetooth-label,
+#night-mode-label,
+#caffeine-label {
+  color: $shadow;
+  font-size: 14px;
+  font-weight: bold;
+  /* margin-bottom: -4px; */
+}
+
+#network-label.disabled,
+#bluetooth-label.disabled,
+#night-mode-label.disabled,
+#caffeine-label.disabled {
+  color: $outline;
+}
+
+/* === Estilos de Texto de Estado === */
+#network-ssid,
+#bluetooth-status,
+#night-mode-status,
+#caffeine-status {
+  color: $surface-bright;
+  font-size: 12px;
+}
+
+#network-ssid.disabled,
+#bluetooth-status.disabled,
+#night-mode-status.disabled,
+#caffeine-status.disabled {
+  color: $outline;
+}

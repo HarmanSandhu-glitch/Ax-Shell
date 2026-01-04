@@ -1,0 +1,93 @@
+#kanban {
+  /* background-color: $shadow; */
+  border-radius: $radius-xl;
+  border: 4px solid $surface;
+  padding: $spacing-xs;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+  /* background-color: unquote("alpha($secondary, 0.1)") ; */
+
+}
+
+
+#kanban-header {
+  border: 2px solid $surface;
+  border-radius: $radius-md;
+  padding: $spacing-xs;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+  border-radius: $radius-pill;
+}
+
+#column-header {
+  padding: $spacing-xs;
+  font-weight: bold;
+  color: $primary;
+
+}
+
+#kanban-note {
+  background-color: unquote("alpha($surface, 0.6)") ;
+  border-radius: $radius-xs;
+  padding: $spacing-sm;
+  margin-bottom: 4px;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#kanban-row:first-child>*>* {
+  border-radius: $radius-lg $radius-lg $radius-xs $radius-xs;
+}
+
+#kanban-row:last-child>*>* {
+  border-radius: $radius-xs $radius-xs $radius-lg $radius-lg;
+}
+
+#inline-editor {
+  border: 2px solid $surface-bright;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+  border-radius: $radius-md;
+  padding: $spacing-sm;
+}
+
+#kanban-btn,
+#kanban-btn-add {
+  background-color: $surface;
+  border-radius: $radius-pill;
+  /* margin-right: px; */
+  padding: $spacing-xs;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#kanban-btn {
+  background-color: $surface;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#kanban-btn:hover,
+#kanban-btn-add:hover {
+  background-color: $surface-bright;
+}
+
+#kanban-btn:active,
+#kanban-btn-add:active {
+  background-color: $primary;
+}
+
+#kanban-btn-label,
+#kanban-btn-neg {
+  font-size: 20px;
+  color: $primary;
+}
+
+#kanban-btn-neg {
+  color: white;
+}
+
+#kanban-btn:active #kanban-btn-label,
+#kanban-btn-add:active #kanban-btn-label {
+  color: $shadow;
+}

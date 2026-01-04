@@ -4,17 +4,25 @@
   color: var(--foreground);
   border-radius: 16px;
   padding: 10px;
+  background-color: alpha(var(--secondary), 0.1);
+  border: 1px solid alpha(var(--outline), 0.2);
+  background-color: var(--surface);
 }
 
 #emoji #search-entry selection {
   color: var(--background);
   background-color: var(--primary);
+  background-color: alpha(var(--secondary), 0.1);
+  border: 1px solid alpha(var(--outline), 0.2);
+  background-color: var(--surface);
 }
 
 #emoji #close-button {
   background-color: var(--surface);
   border-radius: 16px;
   padding: 8px;
+  border: 1px solid alpha(var(--outline), 0.2);
+  background-color: var(--surface);
 }
 
 #emoji #close-button:hover,
@@ -27,7 +35,7 @@
 }
 
 #emoji #close-label {
-  color: var(--red-dim);
+  color: var(--foreground);
   font-size: 24px;
 }
 
@@ -39,12 +47,14 @@
   border-radius: 40px;
   padding: 16px;
   transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
 }
 
 @keyframes loadEmojiSlot {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -56,6 +66,8 @@
 #emoji #emoji-slot-button.selected {
   border-radius: 16px;
   background-color: var(--surface-bright);
+  border: 1px solid alpha(var(--outline), 0.2);
+  background-color: var(--surface);
 }
 
 #emoji #emoji-slot-button:active {

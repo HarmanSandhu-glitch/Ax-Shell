@@ -1,0 +1,95 @@
+#emoji #search-entry {
+  font-weight: bold;
+  background-color: $surface;
+  color: $foreground;
+  border-radius: $radius-lg;
+  padding: $spacing-md;
+  background-color: unquote("alpha($secondary, 0.1)") ;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  background-color: $surface;
+}
+
+#emoji #search-entry selection {
+  color: $background;
+  background-color: $primary;
+  background-color: unquote("alpha($secondary, 0.1)") ;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  background-color: $surface;
+}
+
+#emoji #close-button {
+  background-color: $surface;
+  border-radius: $radius-lg;
+  padding: $spacing-sm;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  background-color: $surface;
+}
+
+#emoji #close-button:hover,
+#emoji #close-button:focus {
+  background-color: $surface-bright;
+}
+
+#emoji #close-button:active {
+  background-color: $red-dim;
+}
+
+#emoji #close-label {
+  color: $foreground;
+  font-size: 24px;
+}
+
+#emoji #close-button:active #close-label {
+  color: $shadow;
+}
+
+#emoji #emoji-slot-button {
+  border-radius: $radius-pill;
+  padding: $spacing-lg;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275 ;
+
+}
+
+@keyframes loadEmojiSlot {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#emoji #emoji-slot-button:hover,
+#emoji #emoji-slot-button:focus,
+#emoji #emoji-slot-button:selected,
+#emoji #emoji-slot-button.selected {
+  border-radius: $radius-lg;
+  background-color: $surface-bright;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  background-color: $surface;
+}
+
+#emoji #emoji-slot-button:active {
+  background-color: $primary;
+}
+
+#emoji #emoji-name-label {
+  color: $foreground;
+  font-weight: bold;
+}
+
+#emoji #emoji-slot-button:hover #emoji-name-label,
+#emoji #emoji-slot-button:focus #emoji-name-label,
+#emoji #emoji-slot-button:selected #emoji-name-label,
+#emoji #emoji-slot-button.selected #emoji-name-label {
+  color: $primary;
+}
+
+#emoji #emoji-slot-button:active #emoji-name-label {
+  color: $shadow;
+}
+
+#emoji #emoji-char-label {
+  font-size: 24px;
+}

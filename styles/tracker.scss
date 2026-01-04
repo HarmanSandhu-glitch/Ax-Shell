@@ -1,0 +1,482 @@
+/* Tracker Module Styles - Enhanced visual design */
+
+#tracker {
+    border-radius: $radius-xl;
+    border: 1px solid unquote("alpha($secondary, 0.2)") ;
+    /* box-shadow: 0 4px 12px unquote("alpha($primary, 1)") ; */
+    padding: $spacing-xs;
+
+}
+
+/* Section Boxes - Glass-like appearance */
+#tracker-goals-section,
+#tracker-timer-section,
+#tracker-reminders-section,
+#tracker-weekly-report,
+#tracker-monthly-report {
+    border-radius: $radius-lg;
+    border: 1px solid unquote("alpha($secondary, 0.2)") ;
+    padding: $spacing-md;
+    /* background: linear-gradient(180deg,
+            unquote("alpha($surface, 0.8)")  0%,
+            unquote("alpha($shadow, 0.9)")  100% ;
+    box-shadow: inset 0 1px 0 unquote("alpha($foreground, 0.05)") ; */
+}
+
+#tracker-goals-section {
+    min-width: 280px;
+}
+
+#tracker-timer-section,
+#tracker-reminders-section {
+    min-width: 200px;
+}
+
+#tracker-weekly-report,
+#tracker-monthly-report {
+    min-width: 220px;
+}
+
+/* Section Titles - Glowing accent */
+#tracker-section-title {
+    font-size: 10pt;
+    font-weight: bold;
+    color: $primary;
+    margin-bottom: 6px;
+    text-shadow: 0 0 12px unquote("alpha($primary, 0.4)") ;
+    /* text-align: center; */
+}
+
+/* Tasks List */
+#tracker-tasks-list,
+#tracker-reminders-list {
+    margin: 0px 0;
+}
+
+/* Task Row - Elevated card style */
+#tracker-task-row {
+    /* background: linear-gradient(135deg,
+            $surface  0%,
+            unquote("alpha($surface-bright, 0.7)")  100% ; */
+    border-radius: $radius-pill;
+    padding: $spacing-xs $spacing-md;
+    margin-bottom: 3px;
+    background-color: unquote("alpha($secondary, 0.1)") ;
+    border: 1px solid unquote("alpha($outline, 0.1)") ;
+    box-shadow: 0 2px 4px unquote("alpha($shadow, 0.3)") ;
+    border-radius: $radius-pill;
+    /* border-radius: 8px; */
+    padding: $spacing-xs $spacing-xs $spacing-xs $spacing-xl;
+
+    /* box-shadow: 0 2px 4px unquote("alpha($shadow, 0.3)") ; */
+    transition: all 0.2s ease;
+}
+
+#tracker-task-row:hover {
+    background: linear-gradient(135deg,
+            $surface-bright  0%,
+            unquote("alpha($primary, 0.15)")  100% ;
+    border-color: unquote("alpha($primary, 0.3)") ;
+    box-shadow: 0 4px 8px unquote("alpha($shadow, 0.4)") ;
+}
+
+#tracker-task-name {
+    font-size: 12pt;
+    font-weight: bold;
+    color: $foreground;
+}
+
+#tracker-task-time {
+    font-size: 8pt;
+    color: $outline;
+    /* background: $primary; */
+    /* font-style: italic; */
+    font-weight: bold;
+}
+
+/* Task Progress - Pill badge */
+#tracker-task-progress {
+    font-size: 12pt;
+    font-weight: bold;
+    color: $foreground;
+    /* padding: 4px 6px; */
+    margin: 0 $spacing-sm;
+    /* background: linear-gradient(135deg,
+            $primary  0%,
+            unquote("alpha($secondary, 0.9)")  100% ; */
+    /* border-radius: 10px; */
+    /* box-shadow: 0 2px 6px unquote("alpha($primary, 0.3)") ; */
+}
+
+/* Task Buttons - Circular with glow */
+
+
+
+
+
+
+#tracker-task-btn label {
+    font-size: 14px;
+    font-weight: bolder;
+    color: $primary;
+}
+
+#tracker-task-btn:active label {
+    color: $on-primary;
+}
+
+/* Entry Fields - Inset look */
+#tracker-task-entry,
+#tracker-units-entry,
+#tracker-reminder-entry,
+#tracker-time-entry {
+    background-color: unquote("alpha($secondary, 0.1)") ;
+    border-radius: $radius-pill $radius-md $radius-md $radius-pill;
+    /* top right bottom left */
+    padding: 0 $spacing-xl;
+    font-weight: bold;
+    color: $foreground;
+    font-size: 9pt;
+    border: 1px solid unquote("alpha($secondary, 0.2)") ;
+    /* text-align: center; */
+    /* box-shadow: inset 0 2px 4px unquote("alpha($shadow, 0.5)") ; */
+    transition: all 0.15s ease;
+    border: 1px solid unquote("alpha($outline, 0.1)") ;
+    box-shadow: 0 2px 4px unquote("alpha($shadow, 0.3)") ;
+}
+
+#tracker-task-entry:focus,
+#tracker-units-entry:focus,
+#tracker-reminder-entry:focus,
+#tracker-time-entry:focus {
+    /* background-color: unquote("alpha($surface, 0.8)") ; */
+    border-color: $primary;
+    border: 1px solid unquote("alpha($outline, 0.4)") ;
+    box-shadow: 0 2px 4px unquote("alpha($shadow, 0.3)") ;
+    /* box-shadow: inset 0 2px 4px unquote("alpha($shadow, 0.3)") ,
+        0 0 8px unquote("alpha($primary, 0.3)") ; */
+}
+
+#tracker-units-entry,
+#tracker-time-entry {
+    min-width: 50px;
+    border-radius: $radius-md $radius-pill $radius-pill $radius-md;
+    border: 1px solid unquote("alpha($outline, 0.1)") ;
+    box-shadow: 0 2px 4px unquote("alpha($shadow, 0.3)") ;
+}
+
+/* Add Button - Accent glow */
+#tracker-add-btn {
+    /* background: linear-gradient(180deg,
+            $surface-bright  0%,
+            $surface  100% ; */
+    background: $primary;
+    border-radius: $radius-pill;
+    padding: $spacing-xs $spacing-xs;
+    min-width: 32px;
+    color: black;
+    margin: 0 0 0 $spacing-xs;
+    min-height: 32px;
+    border: 1px solid unquote("alpha($primary, 0.3)") ;
+    transition: all 0.15s ease;
+    font-weight: 900;
+    border: 1px solid unquote("alpha($outline, 0.2)") ;
+    box-shadow: 0 2px 4px unquote("alpha($shadow, 0.3)") ;
+}
+
+
+
+
+
+#tracker-add-btn label {
+    font-size: 16px;
+    font-weight: 900;
+    color: $on-primary;
+    /* text-shadow: 0 0 8px unquote("alpha($primary, 0.5)") ; */
+}
+
+#tracker-add-btn:active label {
+    color: $on-primary;
+    text-shadow: none;
+}
+
+/* Timer Display - Large glowing display */
+#tracker-timer-display {
+    font-size: 48pt;
+    font-weight: bold;
+    color: $primary;
+    /* padding: ; */
+    /* background: linear-gradient(180deg,
+            $surface  0%,
+            unquote("alpha($shadow, 0.8)")  100% ; */
+    /* border-radius: 12px; */
+    margin: $spacing-xs 0;
+    /* border: 1px solid unquote("alpha($primary, 0.2)") ; */
+    text-shadow: 0 0 20px unquote("alpha($primary, 0.6)") ,
+        0 0 40px unquote("alpha($primary, 0.3)") ;
+    /* box-shadow: inset 0 2px 0 unquote("alpha($foreground, 0.05)") , */
+    /* 0 4px 12px unquote("alpha($shadow, 0.5)") ; */
+}
+
+/* Timer Buttons - Play/Stop with distinct colors */
+#tracker-play-btn,
+#tracker-stop-btn {
+    /* background: linear-gradient(180deg,
+            $surface-bright  0%,
+            $surface  100% ; */
+    border-radius: $radius-pill;
+    /* padding: 8px 12px; */
+    min-width: 40px;
+    min-height: 40px;
+    /* border: 1px solid unquote("alpha($outline, 0.2)") ; */
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1 ;
+}
+
+#tracker-play-btn:hover {
+    background: linear-gradient(180deg,
+            unquote("alpha($green, 0.2)")  0%,
+            $surface-bright  100% ;
+    border-color: unquote("alpha($green, 0.5)") ;
+    box-shadow: 0 0 12px unquote("alpha($green, 0.3)") ;
+}
+
+#tracker-stop-btn:hover {
+    background: linear-gradient(180deg,
+            unquote("alpha($red, 0.2)")  0%,
+            $surface-bright  100% ;
+    border-color: unquote("alpha($red, 0.5)") ;
+    box-shadow: 0 0 12px unquote("alpha($red, 0.3)") ;
+}
+
+#tracker-play-btn:active {
+    background: $green;
+    box-shadow: 0 0 16px unquote("alpha($green, 0.6)") ;
+}
+
+#tracker-stop-btn:active {
+    background: $red;
+    box-shadow: 0 0 16px unquote("alpha($red, 0.6)") ;
+}
+
+#tracker-play-btn label {
+    font-size: 20px;
+    color: $green;
+    text-shadow: 0 0 8px unquote("alpha($green, 0.4)") ;
+}
+
+#tracker-stop-btn label {
+    font-size: 20px;
+    color: $red;
+    text-shadow: 0 0 8px unquote("alpha($red, 0.4)") ;
+}
+
+#tracker-play-btn:active label {
+    color: $shadow;
+    text-shadow: none;
+}
+
+#tracker-stop-btn:active label {
+    color: $shadow;
+    text-shadow: none;
+}
+
+#tracker-stop-btn:disabled {
+    opacity: 0.3;
+    box-shadow: none;
+}
+
+#tracker-stop-btn:disabled label {
+    text-shadow: none;
+}
+
+/* Task Combo - Dropdown style */
+#tracker-task-combo {
+    /* background: linear-gradient(180deg,
+            $surface  0%,
+            unquote("alpha($shadow, 0.8)")  100% ; */
+    background-color: unquote("alpha($secondary, 0.1)") ;
+    border: 1px solid unquote("alpha($secondary, 0.2)") ;
+    border-radius: $radius-pill;
+    padding: $spacing-sm $spacing-sm;
+    color: $foreground;
+    font-size: 9pt;
+    margin-top: 6px;
+}
+
+#tracker-task-combo:hover {
+    border-color: unquote("alpha($primary, 0.4)") ;
+}
+
+/* Reminder Row */
+#tracker-reminder-row {
+    background-color: unquote("alpha($secondary, 0.1)") ;
+    border: 1px solid unquote("alpha($outline, 0.1)") ;
+    box-shadow: 0 2px 4px unquote("alpha($shadow, 0.3)") ;
+    border-radius: $radius-pill;
+    /* border-radius: 8px; */
+    padding: $spacing-xs $spacing-xs $spacing-xs $spacing-xl;
+    margin-bottom: 3px;
+    transition: all 0.2s ease;
+}
+
+#tracker-reminder-row:hover {
+    background: linear-gradient(135deg,
+            $surface-bright  0%,
+            unquote("alpha($secondary, 0.15)")  100% ;
+    border-color: unquote("alpha($secondary, 0.3)") ;
+}
+
+#tracker-reminder-name {
+    font-size: 12pt;
+    font-weight: bold;
+    color: $foreground;
+}
+
+/* Reminder Time Badge */
+#tracker-reminder-time {
+    font-size: 8pt;
+    font-weight: bold;
+    color: $on-secondary;
+    padding: $spacing-xs $spacing-sm;
+    background: linear-gradient(135deg,
+            $secondary  0%,
+            unquote("alpha($tertiary, 0.8)")  100% ;
+    border-radius: $radius-md;
+    /* box-shadow: 0 2px 6px unquote("alpha($secondary, 0.3)") ; */
+}
+
+/* Delete Button - Red accent with glow */
+#tracker-reminder-delete {
+    background: unquote("alpha($red, 0.1)") ;
+    border-radius: $radius-pill;
+    padding: $spacing-xs $spacing-xs;
+    min-width: 24px;
+    min-height: 24px;
+    border: 1px solid unquote("alpha($red, 0.1)") ;
+    /* box-shadow: 0 2px 4px unquote("alpha($red, 0.3)") ;  */
+    transition: all 0.15s ease;
+}
+
+#tracker-reminder-delete:hover {
+    background: unquote("alpha($red, 0.2)") ;
+    border-color: unquote("alpha($red, 0.5)") ;
+    box-shadow: 0 0 8px unquote("alpha($red, 0.3)") ;
+}
+
+#tracker-reminder-delete:active {
+    background: $red;
+    box-shadow: 0 0 12px unquote("alpha($red, 0.6)") ;
+}
+
+#tracker-reminder-delete label {
+    font-size: 14px;
+    color: $red;
+}
+
+#tracker-reminder-delete:active label {
+    color: $shadow;
+}
+
+/* Weekly Chart - Gradient border */
+#tracker-weekly-chart {
+    /* background: linear-gradient(180deg,
+            unquote("alpha($surface, 0.9)")  0%,
+            unquote("alpha($shadow, 0.95)")  100% ; */
+    border-radius: $radius-md;
+    min-height: 100px;
+    border: 1px solid unquote("alpha($outline, 0.2)") ;
+    box-shadow: 0 2px 4px unquote("alpha($shadow, 0.3)") ;
+}
+
+#tracker-export-json,
+#tracker-export-csv {
+    background-color: unquote("alpha($primary, 0.1)") ;
+    color: $shadow;
+    border-radius: $radius-xl;
+    margin-top: 6px;
+    padding: $spacing-xs $spacing-md;
+    box-shadow: 0 0 4px unquote("alpha($shadow, 0.5)") ;
+    border: 1px solid unquote("alpha($outline, 0.2)") ;
+    box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+/* Monthly Calendar (compact, matches calendar.css  */
+#tracker-monthly-report {
+    border-radius: $radius-xl;
+    border: 1px solid unquote("alpha($outline, 0.2)") ;
+    box-shadow: 0 2px 4px unquote("alpha($shadow, 0.3)") ;
+    padding: $spacing-md;
+    min-width: 0;
+}
+
+#tracker-monthly-grid {
+    border-radius: $radius-lg;
+    border: 1px solid unquote("alpha($outline, 0.2)") ;
+    box-shadow: 0 2px 4px unquote("alpha($shadow, 0.3)") ;
+    padding: 2px;
+    background: none;
+    border: none;
+}
+
+#tracker-month-header {
+    font-weight: bold;
+    color: $primary;
+    font-size: 8pt;
+    min-width: 18px;
+    min-height: 18px;
+    padding: 2px;
+}
+
+#tracker-month-day {
+    font-weight: bold;
+    color: $outline;
+    border: 1px solid unquote("alpha($outline, 0.2)") ;
+    box-shadow: 0 2px 4px unquote("alpha($shadow, 0.3)") ;
+    font-size: 8pt;
+    min-width: 18px;
+    min-height: 18px;
+    padding: 2px;
+    border-radius: $radius-md;
+}
+
+#tracker-month-day:hover {
+    background-color: $surface-bright;
+    color: $foreground;
+}
+
+#tracker-month-day-active,
+#tracker-month-day-today {
+    background-color: $foreground;
+    color: $shadow;
+    border-radius: $radius-pill;
+}
+
+#tracker-month-day-empty {
+    min-width: 18px;
+    min-height: 18px;
+    font-size: 8pt;
+    padding: 2px;
+    color: $surface-bright;
+}
+
+/* Scrollbar - Sleek minimal */
+#tracker scrollbar {
+    background-color: transparent;
+    border: 1px solid unquote("alpha($outline, 0.2)") ;
+    box-shadow: 0 2px 4px unquote("alpha($shadow, 0.3)") ;
+}
+
+#tracker scrollbar slider {
+    background: linear-gradient(90deg,
+            $surface-bright  0%,
+            $surface  100% ;
+    border-radius: $radius-sm;
+    min-width: 6px;
+    border: 1px solid unquote("alpha($outline, 0.1)") ;
+}
+
+#tracker scrollbar slider:hover {
+    background: linear-gradient(90deg,
+            unquote("alpha($primary, 0.4)")  0%,
+            $surface-bright  100% ;
+}

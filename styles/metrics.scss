@@ -1,0 +1,103 @@
+#metrics-small {
+  background-color: $shadow;
+  padding: $spacing-xs;
+}
+
+#metrics-small.invert {
+  background-color: $surface;
+  border-radius: $radius-md;
+}
+
+#metrics-circle {
+  color: $surface-bright;
+  border: 3px solid $primary;
+}
+
+#metrics-circle.bat {
+  border: 3px solid $green;
+}
+
+#metrics-circle.alert {
+  border: 3px solid $red-dim;
+}
+
+#metrics-icon {
+  font-size: 16px;
+}
+
+#metrics-icon.alert {
+  color: $red-dim;
+}
+
+#metrics-level {
+  font-weight: bold;
+  margin: 0 $spacing-xs;
+}
+
+#metrics-sep {
+  min-width: 4px;
+}
+
+#network-icon-label {
+  color: $foreground;
+  font-size: 20px;
+  padding: $spacing-xs;
+  border-radius: $radius-md;
+  transition: all 0.1s ease;
+}
+
+#download-label {
+  color: $green;
+  font-size: 14px;
+  font-weight: bold;
+  padding: $spacing-xs;
+  border-radius: $radius-md;
+  transition: all 0.1s ease;
+}
+
+#download-label.urgent {
+  color: $shadow;
+}
+
+#network-icon-label.urgent {
+  color: $shadow;
+}
+
+#button-bar.download {
+  background-color: $green;
+}
+
+#button-bar.upload {
+  background-color: $yellow;
+}
+
+#download-icon-label {
+  color: $green;
+  font-size: 16px;
+}
+
+#download-icon-label.urgent {
+  color: $shadow;
+}
+
+#upload-icon-label {
+  color: $yellow;
+  font-size: 16px;
+}
+
+#upload-label {
+  color: $yellow;
+  font-size: 14px;
+  font-weight: bold;
+  padding: $spacing-xs;
+  border-radius: $radius-md;
+  transition: all 0.1s ease;
+}
+
+#upload-label.urgent {
+  color: $shadow;
+}
+
+#upload-icon-label.urgent {
+  color: $shadow;
+}

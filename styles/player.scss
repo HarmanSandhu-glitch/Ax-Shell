@@ -1,0 +1,205 @@
+#player {
+  min-width: 172px;
+  border-radius: $radius-xl;
+  border: 4px solid $surface;
+  /* background-color: $shadow; */
+  padding: $spacing-sm;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#player-progress {
+  color: $surface-bright;
+  border: 8px solid $foreground;
+  border: 8px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#player-title,
+#player-album,
+#player-artist {
+  font-weight: bold;
+
+}
+
+#player-title {
+  margin-top: -10px;
+  font-size: 11pt;
+}
+
+#player-title.vertical {
+  margin-top: 0;
+  font-size: 11pt;
+}
+
+#player-album {
+  /* margin-top: -5px; */
+  font-size: 9pt;
+  color: $outline;
+
+}
+
+#player-artist {
+  font-size: 10pt;
+  color: $primary;
+}
+
+/* —————— Reemplazo de #player-btn-label —————— */
+#player-btn label {
+  font-size: 16px;
+  color: $foreground;
+}
+
+#player-btn label.play-pause {
+  font-size: 24px;
+  color: $shadow;
+}
+
+/* —————— Botón —————— */
+#player-btn {
+  padding: $spacing-xs;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275 ;
+
+}
+
+#player-btn.play-pause.playing {
+  background-color: $primary;
+  border-radius: $radius-pill;
+  padding: $spacing-sm;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#player-btn.play-pause {
+  background-color: $surface;
+  border-radius: $radius-xl;
+  padding: $spacing-sm;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#player-btn.play-pause label {
+  color: $outline;
+}
+
+#player-btn.play-pause:hover {
+  background-color: $surface-bright;
+}
+
+#player-btn.play-pause:hover label {
+  color: $outline;
+}
+
+#player-btn.play-pause.playing label {
+  color: $shadow;
+}
+
+#player-btn.play-pause.stop {
+  background-color: $shadow;
+}
+
+#player-btn.play-pause.stop label {
+  color: $foreground;
+}
+
+#player-btn.play-pause.stop:hover label {
+  color: $foreground;
+}
+
+#player-btn:hover {
+  background-color: $foreground;
+}
+
+#player-btn.play-pause.playing:hover {
+  background-color: $foreground;
+}
+
+#player-btn:hover label {
+  color: $shadow;
+}
+
+#player-btn:active {
+  background-color: $primary;
+}
+
+#player-btn:active label {
+  color: $foreground;
+}
+
+#player-time {
+  font-weight: bold;
+  color: $outline;
+  font-size: 10pt;
+}
+
+#player-switcher {
+  margin: 0 $spacing-xxl;
+
+}
+
+#player-switcher.stack-switcher>*:focus {
+  background-color: $surface-bright;
+}
+
+#player-switcher.stack-switcher button label {
+  font-size: 16px;
+  color: $surface-bright;
+}
+
+#player-switcher.stack-switcher button:hover label {
+  font-size: 16px;
+  color: $outline;
+}
+
+#player-switcher.stack-switcher>*:checked label {
+  font-size: 20px;
+  color: $foreground;
+}
+
+#player-switcher.stack-switcher>*:checked:hover label {
+  font-size: 20px;
+  color: $foreground;
+}
+
+#player-switcher-vertical {
+  margin: 0 $spacing-sm;
+}
+
+#player-switcher-vertical.stack-switcher>*:focus {
+  background-color: $surface-bright;
+}
+
+#player-switcher-vertical.stack-switcher button {
+  font-size: 0px;
+  color: $surface-bright;
+  background-color: $surface-bright;
+  min-width: 8px;
+  min-height: 8px;
+  margin: 0 -1px;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275 ;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#player-switcher-vertical.stack-switcher button:hover {
+  font-size: 0px;
+  color: $outline;
+  background-color: $foreground;
+}
+
+#player-switcher-vertical.stack-switcher>*:checked {
+  font-size: 0px;
+  color: $foreground;
+  background-color: $primary;
+  min-width: 32px;
+}
+
+#player-switcher-vertical.stack-switcher>*:checked:hover {
+  font-size: 0px;
+  color: $foreground;
+  background-color: $foreground;
+}
+
+#player-switcher-vertical.stack-switcher button label {
+  font-size: 0px;
+}

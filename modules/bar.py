@@ -49,6 +49,27 @@ tooltip_overview = """<b>Overview</b>"""
 class Bar(Window):
     def __init__(self, monitor_id: int = 0, **kwargs):
         self.monitor_id = monitor_id
+        """
+        Initialize a bar widget for a desktop environment with support for multiple monitors and themes.
+        This constructor sets up a customizable bar with the following features:
+        - **Monitor Support**: Creates workspace buttons specific to each monitor (10 workspaces per monitor)
+        - **Positioning & Anchoring**: Configures bar position (Top/Bottom/Left/Right) and margin based on theme and orientation
+        - **Layout Modes**: Supports both horizontal and vertical bar orientations
+        - **Workspace Management**: Displays workspaces with optional Chinese numerals
+        - **System Components**: Integrates weather, network, system profiles, battery, system tray, and metrics
+        - **Control Widgets**: Includes buttons for apps, power menu, overview, language, and date/time
+        - **Theme Support**: Applies styling based on theme selection (Pills, Dense, Edge, EdgeCenter)
+        - **Integrated Dock**: Optionally embeds a dock widget when bar is at bottom position
+        - **Revealer Animations**: Left and right revealer containers with slide transitions
+        - **Event Handling**: Connects to Hyprland for language and layout changes
+        - **Visibility Management**: Manages component visibility based on configuration
+        Args:
+            monitor_id (int): The monitor index for this bar instance. Defaults to 0.
+            **kwargs: Additional keyword arguments, notably 'notch' for notch configuration.
+        Attributes:
+            Various widget components are initialized and organized into start/center/end containers
+            based on bar orientation (horizontal or vertical).
+        """
         
         super().__init__(
             name="bar",
@@ -625,3 +646,4 @@ class Bar(Window):
             self.workspaces_num.add_style_class("chinese")
         else:
             self.workspaces_num.remove_style_class("chinese")
+    

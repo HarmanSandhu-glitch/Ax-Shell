@@ -1,0 +1,144 @@
+#bluetooth-header,
+#network-header {
+  border: 2px solid $surface;
+  padding: $spacing-xs;
+  border-radius: $radius-pill;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+  background-color: unquote("alpha($secondary, 0.1)") ;
+}
+
+#bluetooth-device,
+#wifi-ap-slot {
+  border: 2px solid $surface;
+  border-radius: $radius-pill;
+  padding: $spacing-xs $spacing-xs $spacing-xs $spacing-lg;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+  background-color: unquote("alpha($secondary, 0.1)") ;
+  margin-top: 4px;
+}
+
+#bluetooth-scan,
+#bluetooth-back,
+#network-refresh,
+#network-back {
+  background-color: unquote("alpha($secondary, 0.3)") ;
+  border-radius: $radius-pill;
+  padding: $spacing-xs;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#bluetooth-back-label,
+#network-back-label {
+  font-size: 20px;
+}
+
+#bluetooth-scan:hover,
+#bluetooth-back:hover,
+#network-refresh:hover,
+#network-back:hover {
+  background-color: $surface-bright;
+}
+
+#bluetooth-scan label,
+#bluetooth-toggle label,
+#wifi-connect-button label {
+  font-weight: bold;
+}
+
+#bluetooth-text,
+#bluetooth-section {
+  font-weight: bold;
+}
+
+#bluetooth-section {
+  background-color: $surface;
+  border-radius: $radius-pill;
+  padding: $spacing-sm;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#bluetooth-connection {
+  font-size: 20px;
+}
+
+#bluetooth-connect,
+#wifi-connect-button {
+  font-weight: bold;
+  background-color: unquote("alpha($secondary, 0.3)") ;
+  border-radius: $radius-pill;
+  padding: $spacing-sm;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+
+}
+
+#wifi-connect-button.connected {
+  background-color: $green;
+}
+
+#wifi-connect-button.connected label {
+  color: $shadow;
+}
+
+#bluetooth-connect.connected {
+  background-color: $blue;
+}
+
+#bluetooth-connect.connected label {
+  color: $shadow;
+}
+
+#bluetooth-connect:hover {
+  background-color: $surface-bright;
+}
+
+#bluetooth-paired,
+#bluetooth-available {
+  background-color: $surface;
+  border-radius: $radius-xl;
+  padding: $spacing-xs;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#bt-sep {
+  /*padding: 1px;*/
+  border-radius: $radius-lg;
+  /*background-color: $surface;*/
+  /*margin: 0 16px;*/
+}
+
+#bluetooth-scan-label,
+#network-refresh-label {
+  font-size: 20px;
+  color: $primary;
+}
+
+#bluetooth-scan.scanning {
+  animation: blink 0.5s ease infinite;
+}
+
+#bluetooth-scan-label.scanning {
+  animation: blink 0.5s ease infinite;
+}
+
+@keyframes blink {
+  0% {
+    background-color: $blue;
+    color: $shadow;
+  }
+
+  50% {
+    background-color: $shadow;
+    color: $blue;
+  }
+
+  100% {
+    background-color: $blue;
+    color: $shadow;
+  }
+}

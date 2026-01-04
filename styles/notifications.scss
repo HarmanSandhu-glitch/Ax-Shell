@@ -1,0 +1,214 @@
+#action-button {
+  border-radius: $radius-lg;
+  background-color: $surface;
+  padding: $spacing-sm;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#action-button:hover {
+  background-color: $surface-bright;
+}
+
+#action-button:active {
+  background-color: $primary;
+}
+
+#action-button:active #button-label {
+  color: $shadow;
+}
+
+#notification-image image {
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+  border-radius: $radius-lg;
+}
+
+#notification-summary,
+#button-label {
+  font-weight: bold;
+}
+
+#notification-summary {
+  font-weight: bold;
+  color: $primary;
+}
+
+#notification-app-name {
+  color: $outline;
+}
+
+#action-button {
+  margin-top: $spacing-sm;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#notification-stack-box {
+  border-radius: $radius-pill;
+  padding: $spacing-lg;
+  border: 2px solid $surface;
+  background-color: $shadow;
+  margin: $spacing-sm;
+  margin-bottom: $spacing-xs;
+  min-width: 330px;
+
+}
+
+#notification-navigation {
+  padding: $spacing-lg;
+}
+
+#notif-close-button {
+  background-color: $surface;
+  border-radius: $radius-lg;
+  padding: $spacing-sm;
+}
+
+#notif-close-button:hover,
+#notif-close-button:focus {
+  background-color: $surface-bright;
+}
+
+#notif-close-button:active {
+  background-color: white;
+}
+
+#notif-close-label {
+  color: white;
+  font-size: 16px;
+}
+
+#notif-close-button:active #notif-close-label {
+  color: $shadow;
+}
+
+#nav-button {
+  padding: $spacing-sm;
+  border-radius: $radius-lg;
+  background: $shadow;
+  border: 2px solid $surface;
+  margin-top: -12px;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#nav-button:hover {
+  background: $surface-bright;
+}
+
+#nav-button:disabled #nav-button-label {
+  color: $surface-bright;
+}
+
+#nav-button-label {
+  font-size: 16px;
+}
+
+#nav-button-label.close {
+  color: $red-dim;
+}
+
+#nav-button:hover #nav-button-label {
+  color: $primary;
+}
+
+#nav-button:hover #nav-button-label.close {
+  color: $red-dim;
+}
+
+#notification-history scrollbar {
+  background: transparent;
+}
+
+#notification-history scrollbar.vertical slider {
+  background: $primary;
+  border-radius: $radius-sm;
+  min-width: 16px;
+  min-height: 48px;
+  margin: $spacing-xs;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#notification-history scrollbar.vertical trough {
+  background: $surface;
+  border: none;
+  border-radius: $radius-md;
+  margin: $spacing-xs;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#notification-box-hist {
+  padding: $spacing-sm;
+  border-radius: $radius-md;
+  border: 2px solid $surface;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 2px 4px unquote("alpha($shadow, 0.3)") ;
+}
+
+
+
+#notification-timestamp {
+  color: $surface-bright;
+
+}
+
+#notification-history-header {
+  border-radius: $radius-pill;
+  border: 2px solid $surface;
+  padding: $spacing-xs;
+  margin-bottom: $spacing-xs;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+  background-color: unquote("alpha($secondary, 0.1)") ;
+}
+
+#nhh {
+  font-weight: bold;
+}
+
+#nhh-button {
+  border-radius: $radius-pill;
+  background-color: $surface;
+  padding: $spacing-xs;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#nhh-button:hover {
+  background-color: $surface-bright;
+}
+
+#nhh-button-label {
+  color: white;
+  font-size: 20px;
+}
+
+#dnd-label {
+  font-size: 20px;
+  margin-left: 4px;
+
+}
+
+#notif-sep {
+  padding: $spacing-xs;
+  border-radius: $radius-lg;
+  background-color: $surface-bright;
+  margin: 0 $spacing-sm;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+}
+
+#notif-date-sep {
+  padding: $spacing-xs;
+  border-radius: $radius-pill;
+  background-color: $shadow;
+}
+
+#notif-date-sep-label {
+  color: $outline;
+  font-weight: bold;
+}

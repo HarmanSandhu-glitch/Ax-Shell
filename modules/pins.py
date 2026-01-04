@@ -8,6 +8,8 @@ import os
 import re
 import subprocess
 import tempfile
+import shutil
+import threading
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -50,6 +52,17 @@ def open_url(url):
     except Exception as e:
         print("Error opening URL:", e)
 
+
+def pick_file_with_kdialog():
+    """Use Plasma's kdialog picker when available, otherwise return None."""
+    if not shutil.which("kdialog"):
+        return None
+    try:
+        result = subprocess.check_output(["kdialog", "--getopenfilename"], text=True).strip()
+        return result or None
+    except Exception:
+        return None
+
 def is_url(text):
 
     url_pattern = re.compile(
@@ -91,7 +104,7 @@ def download_favicon(url, callback):
                     pass
             GLib.idle_add(callback, None)
 
-    GLib.Thread.new("favicon-download", do_download, None)
+    threading.Thread(target=do_download, name="favicon-download", daemon=True).start()
 
 class FileChangeHandler(FileSystemEventHandler):
     def __init__(self, app):
@@ -348,19 +361,23 @@ class Cell(Gtk.EventBox):
         return True
 
     def select_file(self):
-        dialog = Gtk.FileChooserDialog(
-            title="Select File",
-            parent=self.get_toplevel(),
-            action=Gtk.FileChooserAction.OPEN
-        )
-        dialog.add_buttons(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
-                           Gtk.STOCK_OPEN, Gtk.ResponseType.OK)
-        if dialog.run() == Gtk.ResponseType.OK:
-            filepath = dialog.get_filename()
+        filepath = pick_file_with_kdialog()
+        if not filepath:
+            dialog = Gtk.FileChooserDialog(
+                title="Select File",
+                parent=self.get_toplevel(),
+                action=Gtk.FileChooserAction.OPEN
+            )
+            dialog.add_buttons(Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
+                               Gtk.STOCK_OPEN, Gtk.ResponseType.OK)
+            if dialog.run() == Gtk.ResponseType.OK:
+                filepath = dialog.get_filename()
+            dialog.destroy()
+
+        if filepath:
             self.content = filepath
             self.content_type = 'file'
             self.update_display()
-        dialog.destroy()
 
     def clear_cell(self):
 

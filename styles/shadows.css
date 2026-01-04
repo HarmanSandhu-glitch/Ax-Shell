@@ -17,14 +17,19 @@
 #language,
 #dock {
   box-shadow: 0 0 3px alpha(black, 0.7);
+
 }
 
 #notch-content.panel {
   box-shadow: 0 0 3px alpha(black, 0);
+  border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
 }
 
 #bar-revealer {
   padding: 10px;
+  border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
 }
 
 #boxed-revealer {

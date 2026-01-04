@@ -5,10 +5,13 @@
 
 #pin-cell-box {
   /* background-color: var(--shadow); */
-  border-radius: 16px;
+  border-radius: 50px;
   padding: 16px;
+  margin: 10px 0px 10px 10px;
   border: 4px solid var(--surface);
   /* min-height: 160px; */
+  border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
 }
 
 #pin-file,

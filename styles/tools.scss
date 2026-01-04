@@ -1,0 +1,80 @@
+#toolbox-button {
+  border-radius: $radius-pill;
+  min-width: 52px;
+  min-height: 52px;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275 ;
+
+}
+
+#toolbox-button label {
+  font-size: 24px;
+  color: $foreground;
+}
+
+#toolbox-button.recording label {
+  color: $red-dim;
+}
+
+#toolbox-button.pomodoro label {
+  color: $yellow-dim;
+}
+
+#toolbox-button:hover,
+#toolbox-button:focus {
+  border-radius: $radius-xl;
+  background-color: $surface-bright;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#toolbox-button:hover label,
+#toolbox-button:focus label {
+  color: $primary;
+}
+
+#toolbox-button.recording:hover label,
+#toolbox-button.recording:focus label {
+  color: $red-dim;
+}
+
+#toolbox-button.pomodoro:hover label,
+#toolbox-button.pomodoro:focus label {
+  color: $yellow-dim;
+}
+
+#toolbox-button:active {
+  border-radius: $radius-pill;
+  background-color: $primary;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#toolbox-button:active label {
+  color: $shadow;
+}
+
+#toolbox-button.recording:active {
+  background-color: $red-dim;
+}
+
+#toolbox-button.pomodoro:active {
+  background-color: $yellow-dim;
+}
+
+#toolbox-button.recording:active label {
+  color: $shadow;
+}
+
+#toolbox-button.pomodoro:active label {
+  color: $shadow;
+}
+
+#tool-sep {
+  min-width: 4px;
+  min-height: 4px;
+  margin: 0px $spacing-xs;
+  border-radius: $radius-lg;
+  background-color: $surface-bright;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}

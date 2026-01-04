@@ -1,0 +1,112 @@
+#dock {
+  background-color: $shadow;
+  padding: $spacing-sm;
+  margin: $spacing-sm $spacing-sm 0 $spacing-sm;
+  border-radius: $radius-xl $radius-xl 0 0;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275 ;
+}
+
+#dock.vertical {
+  margin: $spacing-sm 0 $spacing-sm $spacing-sm;
+  border-radius: $radius-xl 0 0 $radius-xl;
+}
+
+#dock.vertical.left {
+  margin: $spacing-sm $spacing-sm $spacing-sm 0;
+  border-radius: 0 $radius-xl $radius-xl 0;
+}
+
+#dock.dense {
+  margin: $spacing-sm $spacing-sm $spacing-xs $spacing-sm;
+  border-radius: $radius-xl;
+  border: 2px solid $surface;
+}
+
+#dock.edge {
+  border-radius: $radius-xl $radius-xl 0 0;
+  border: 2px solid $surface;
+  border-bottom: none;
+}
+
+#dock.dense.vertical {
+  margin: $spacing-sm $spacing-xs $spacing-sm $spacing-sm;
+  border-radius: $radius-xl;
+  border: 2px solid $surface;
+}
+
+#dock.edge.vertical {
+  border-radius: $radius-xl 0 0 $radius-xl;
+  border: 2px solid $surface;
+  border-right: none;
+}
+
+#dock.integrated {
+  background-color: $shadow;
+  padding: $spacing-xs;
+  margin: 0;
+  border-radius: $radius-lg;
+  border: none;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275 ;
+}
+
+#dock.integrated.edge,
+#dock.integrated.dense {
+  background-color: $surface;
+  padding: $spacing-xs;
+  margin: 0;
+  border-radius: $radius-md;
+  border: none;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275 ;
+}
+
+#dock-full {
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275 ;
+  opacity: 1;
+}
+
+#dock-separator {
+  padding: $spacing-xs;
+  border-radius: $radius-lg;
+  background-color: $surface-bright;
+}
+
+#dock-app-button {
+  padding: $spacing-xs;
+  border-radius: $radius-xl;
+  box-shadow: 0 0 4px unquote("alpha($shadow, 0.5)") ;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275 ;
+}
+
+#dock-app-button:hover {
+  background-color: $surface-bright;
+}
+
+#dock-app-button:hover.instance {
+  background-color: $outline;
+}
+
+#dock-app-button:active,
+#dock-app-button:active.instance {
+  background-color: $primary;
+}
+
+#dock-app-button.instance {
+  background: $surface-bright;
+  border-radius: $radius-md;
+}
+
+#dock-corner-left {
+  margin: 0 calc($spacing-sm * -1  0 0;
+}
+
+#dock-corner-right {
+  margin: 0 0 0 calc($spacing-sm * -1 ;
+}
+
+#dock-corner-top {
+  margin: 0 0 calc($spacing-sm * -1  0;
+}
+
+#dock-corner-bottom {
+  margin: calc($spacing-sm * -1  0 0 0;
+}

@@ -286,8 +286,9 @@ class WallpaperSelector(Box):
         os.symlink(full_path, current_wall)
 
         if self.matugen_switcher.get_active():
+            # Try matugen first and fall back to awww if it fails (common when matugen errors silently)
             exec_shell_command_async(
-                f'matugen image "{full_path}" -t {selected_scheme}'
+                f"sh -c 'matugen image \"{full_path}\" -t {selected_scheme} || awww img \"{full_path}\" -t outer --transition-duration 1.5 --transition-step 255 --transition-fps 60 -f Nearest'"
             )
         else:
             exec_shell_command_async(
@@ -376,9 +377,9 @@ class WallpaperSelector(Box):
             os.remove(current_wall)
         os.symlink(full_path, current_wall)
         if self.matugen_switcher.get_active():
-            # Matugen is enabled: run the normal command.
+            # Try matugen first and fall back to awww if it fails (common when matugen errors silently)
             exec_shell_command_async(
-                f'matugen image "{full_path}" -t {selected_scheme}'
+                f"sh -c 'matugen image \"{full_path}\" -t {selected_scheme} || awww img \"{full_path}\" -t outer --transition-duration 1.5 --transition-step 255 --transition-fps 60 -f Nearest'"
             )
         else:
             # Matugen is disabled: run the alternative awww command.

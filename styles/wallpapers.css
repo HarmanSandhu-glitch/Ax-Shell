@@ -5,15 +5,20 @@
 
 #wallpaper-icons:selected {
   background-color: var(--outline);
-  border-radius: 8px;
+  border-radius: 0px;
+  border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
 }
 
 #scheme-dropdown {
   background-color: var(--surface);
   padding: 8px;
+  border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
+  border-radius: 0px 40px 40px 0px;
 }
 
-#scheme-dropdown > * > * {
+#scheme-dropdown>*>* {
   font-weight: bold;
   color: var(--shadow);
 }
@@ -39,6 +44,10 @@
   border-radius: 15px;
   padding: 2px;
   transition: background-color 0.3s ease;
+  border: 2px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 2px 4px alpha(var(--shadow), 0.3);
+
+
 }
 
 /* Style the switch's slider */
@@ -57,6 +66,8 @@
 #matugen-switcher:checked,
 #dnd-switch:checked {
   background-color: var(--primary);
+  border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
 }
 
 /* Optional: additional styling for the slider when active */
@@ -86,16 +97,14 @@
 }
 
 #hue-slider trough {
-  background-image: linear-gradient(
-    to right,
-    #ff0000,
-    #ffff00,
-    #00ff00,
-    #00ffff,
-    #0000ff,
-    #ff00ff,
-    #ff0000
-  );
+  background-image: linear-gradient(to right,
+      #ff0000,
+      #ffff00,
+      #00ff00,
+      #00ffff,
+      #0000ff,
+      #ff00ff,
+      #ff0000);
   border-radius: 8px;
   min-height: 8px;
 }
@@ -125,6 +134,8 @@
   border-radius: 20px;
   padding: 8px;
   box-shadow: 0 0 4px alpha(var(--shadow), 0.5);
+  border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
 }
 
 #apply-color-button:hover {

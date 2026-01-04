@@ -6,6 +6,8 @@
   color: var(--foreground);
   border-radius: 16px;
   padding: 10px;
+  border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
 }
 
 #search-entry selection,
@@ -13,6 +15,8 @@
 #session-name-entry selection {
   color: var(--background);
   background-color: var(--primary);
+  border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
 }
 
 #close-button,
@@ -24,6 +28,8 @@
   border-radius: 40px;
   padding: 8px;
   transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
 }
 
 #close-button:hover,
@@ -36,7 +42,9 @@
 #new-session-button:focus,
 #random-wall-button:hover {
   background-color: var(--surface-bright);
-  border-radius: 16px;
+  border-radius: 40px;
+  border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
 }
 
 #close-button:active,
@@ -47,7 +55,7 @@
 
 #close-label,
 #clear-label {
-  color: var(--red-dim);
+  color: white;
   font-size: 24px;
 }
 
@@ -73,29 +81,35 @@
 #config-button:active #config-label,
 #new-session-button:active #new-session-label,
 #random-wall-button:active #random-wall-label {
-  color: var(--shadow);
+  color: var(--primary);
 }
 
 #scrolled-window {
   border-radius: 16px;
+  border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
 }
 
 #scrolled-window scrollbar,
 #bluetooth-devices scrollbar,
 #network-ap-scrolled-window scrollbar {
-  border-radius: 10px;
+  border-radius: 50px;
   background-color: var(--surface);
   padding: 4px;
   margin-left: 6px;
+  border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
 }
 
 #scrolled-window slider,
 #bluetooth-devices slider,
 #network-ap-scrolled-window slider {
-  border-radius: 8px;
+  border-radius: 50px;
   min-width: 16px;
   min-height: 48px;
   background-color: var(--primary);
+  border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
 }
 
 #slot-button {
@@ -132,6 +146,7 @@
 #app-icon {
   margin: -8px;
   margin-right: 4px;
+  
 }
 
 #app-label {
@@ -154,6 +169,7 @@
 #clip-icon {
   font-size: 20px;
   color: var(--primary);
+  
 }
 
 #app-desc {

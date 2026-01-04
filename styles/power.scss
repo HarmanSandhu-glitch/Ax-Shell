@@ -1,0 +1,37 @@
+#power-menu-button {
+  border-radius: $radius-pill;
+  min-width: 52px;
+  min-height: 52px;
+
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275 ;
+}
+
+#power-menu-button label {
+  font-size: 24px;
+  color: $foreground;
+}
+
+#power-menu-button:hover,
+#power-menu-button:focus {
+  border-radius: $radius-xl;
+  background-color: $surface-bright;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#power-menu-button:hover label,
+#power-menu-button:focus label {
+  color: $primary;
+}
+
+#power-menu-button:active {
+  border-radius: $radius-pill;
+  background-color: $primary;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#power-menu-button:active label {
+  color: $shadow;
+
+}

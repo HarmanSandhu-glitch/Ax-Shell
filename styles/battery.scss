@@ -1,0 +1,68 @@
+#battery {
+  background-color: $shadow;
+  padding: $spacing-xs;
+  border-radius: $radius-lg;
+  margin-top: $spacing-xs;
+}
+
+#battery-circle {
+  color: $surface-bright;
+  border: 3px solid $primary;
+}
+
+#battery-circle.alert {
+  border: 2px solid $red-dim;
+}
+
+#battery-icon {
+  font-size: 20px;
+}
+
+#battery-icon.alert {
+  color: $red-dim;
+}
+
+#battery-save,
+#battery-balanced,
+#battery-performance {
+  border-radius: $radius-md;
+  min-width: 28px;
+  min-height: 28px;
+}
+
+#battery-save-label,
+#battery-balanced-label,
+#battery-performance-label {
+  color: $outline;
+  font-size: 20px;
+}
+
+#battery-save:hover,
+#battery-balanced:hover,
+#battery-performance:hover {
+  background-color: $surface-bright;
+}
+
+#battery-save:hover #battery-save-label,
+#battery-balanced:hover #battery-balanced-label,
+#battery-performance:hover #battery-performance-label {
+  color: $primary;
+}
+
+#battery-save.active,
+#battery-balanced.active,
+#battery-performance.active {
+  background-color: $primary;
+}
+
+#battery-save.active #battery-save-label,
+#battery-balanced.active #battery-balanced-label,
+#battery-performance.active #battery-performance-label {
+  color: $shadow;
+}
+
+#battery-level {
+  color: $primary;
+  font-weight: bold;
+  margin: 0 $spacing-xs;
+}

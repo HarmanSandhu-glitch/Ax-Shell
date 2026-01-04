@@ -1,0 +1,137 @@
+#notch-box {
+  margin: 0 $spacing-xl $spacing-md $spacing-xl;
+
+}
+
+#notch-hover-eventbox {
+  background-color: transparent;
+  min-height: 4px;
+  min-width: 260px;
+
+}
+
+#notch-hover-detection {
+  background-color: transparent;
+  min-height: 4px;
+}
+
+#notch-wrap {
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275 ;
+}
+
+#notch-content {
+  background-color: $shadow;
+  border-radius: 0 0 $radius-xl $radius-xl;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275 ;
+
+}
+
+#notch-content.open {
+  border-radius: 0 0 $radius-pill $radius-pill;
+  padding: $spacing-xs;
+}
+
+#notch-content.open.invert {
+  padding: $spacing-xs;
+  padding-top: 0px;
+  border-radius: 0 0 $radius-pill $radius-pill;
+}
+
+#notch-content.invert {
+  background-color: $surface;
+  border-radius: 0 0 $radius-md $radius-md;
+}
+
+#notch-compact {
+  font-weight: bold;
+}
+
+#notch-corner-left {
+  margin-left: -16px;
+}
+
+#notch-corner-right {
+  margin-right: -16px;
+}
+
+#compact-mpris-icon-label {
+  color: $primary;
+}
+
+#compact-mpris-icon-label,
+#compact-mpris-button-label {
+  font-size: 20px;
+}
+
+#compact-mpris-icon,
+#compact-mpris-button {
+  margin: 0 $spacing-md;
+}
+
+#compact-mpris-icon:hover,
+#compact-mpris-button:hover {
+  background-color: $primary;
+}
+
+#compact-mpris-icon:active,
+#compact-mpris-button:active {
+  background-color: $primary;
+}
+
+#compact-mpris-icon:hover #compact-mpris-icon-label,
+#compact-mpris-button:hover #compact-mpris-button-label {
+  color: $background;
+}
+
+#hyprland-window label {
+  margin: 0px $spacing-sm;
+}
+
+#active-window-box {
+  margin: $spacing-md;
+}
+
+#app-launcher,
+#power-menu,
+#toolbox,
+#dashboard,
+#tmux-manager,
+#clip-history,
+#overview,
+#emoji {
+  background-color: $shadow;
+  padding: $spacing-md;
+  border-radius: 0 0 $radius-pill $radius-pill;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1 ;
+
+}
+
+#notch-content.panel #app-launcher,
+#notch-content.panel #power-menu,
+#notch-content.panel #toolbox,
+#notch-content.panel #dashboard,
+#notch-content.panel #tmux-manager,
+#notch-content.panel #clip-history,
+#notch-content.panel #overview,
+#notch-content.panel #emoji {
+  border-radius: $radius-pill;
+
+}
+
+#notch-content.panel {
+  border-radius: $radius-pill;
+
+}
+
+#notch-box.panel {
+  margin: $spacing-sm;
+  padding: $spacing-xs;
+  background-color: $surface;
+  border-radius: $radius-pill;
+}
+
+#notch-content.open.panel {
+  background-color: $shadow;
+  padding: 0;
+  border-radius: $radius-pill;
+}

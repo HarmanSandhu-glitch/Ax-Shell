@@ -1,11 +1,13 @@
 #notch-box {
   margin: 0 20px 10px 20px;
+  
 }
 
 #notch-hover-eventbox {
   background-color: transparent;
   min-height: 4px;
   min-width: 260px;
+  
 }
 
 #notch-hover-detection {
@@ -21,6 +23,7 @@
   background-color: var(--shadow);
   border-radius: 0 0 20px 20px;
   transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
 }
 
 #notch-content.open {
@@ -100,6 +103,7 @@
   padding: 14px;
   border-radius: 0 0 34px 34px;
   transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1);
+  
 }
 
 #notch-content.panel #app-launcher,
@@ -111,10 +115,12 @@
 #notch-content.panel #overview,
 #notch-content.panel #emoji {
   border-radius: 34px;
+  
 }
 
 #notch-content.panel {
   border-radius: 36px;
+  
 }
 
 #notch-box.panel {

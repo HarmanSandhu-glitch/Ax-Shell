@@ -1,0 +1,261 @@
+#control-slider {
+  /* box-shadow: 0 2px 4px unquote("alpha($shadow, 0.3)") ; */
+  background-color: $surface;
+  margin: 0px 0px 0px 0px;
+  border-radius: $radius-xs $radius-md $radius-md $radius-xs;
+}
+
+#control-slider.no-icon {
+  border-radius: $radius-md;
+}
+
+#control-slider trough {
+  min-height: 32px;
+  padding-right: 4px;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275 ;
+}
+
+#control-slider trough highlight {
+  border-radius: 0 $radius-xs $radius-xs 0;
+  min-height: 28px;
+  margin-right: 8px;
+  background-color: $primary;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275 ;
+}
+
+#control-slider.no-icon trough highlight {
+  border-radius: $radius-md $radius-xs $radius-xs $radius-md;
+}
+
+#control-slider.muted trough highlight,
+#control-slider.muted slider {
+  background-color: $surface-bright;
+}
+
+#control-slider slider {
+  border-radius: 2px;
+  background-color: $primary;
+  min-width: 4px;
+  min-height: 40px;
+  margin: -8px 0;
+  box-shadow:
+    -4px 0 0px 2px $shadow ,
+    4px 0 0px 2px $shadow;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275 ;
+}
+
+#control-slider slider:hover {
+  background-color: $foreground;
+}
+
+#control-small {
+  padding: $spacing-xs;
+  background-color: $shadow;
+}
+
+#control-small.invert {
+  background-color: $surface;
+  border-radius: $radius-md;
+}
+
+#button-volume,
+#button-mic,
+#button-brightness {
+  color: $surface-bright;
+  border: 3px solid $primary;
+}
+
+#button-volume.muted,
+#button-mic.muted {
+  color: $surface-bright;
+  border: 3px solid $outline;
+}
+
+#vol-label,
+#mic-label,
+#brightness-label {
+  font-size: 16px;
+}
+
+#vol-label.muted,
+#mic-label.muted {
+  color: $outline;
+}
+
+#vol-icon,
+#mic-icon,
+#brightness-icon {
+  min-width: 32px;
+  min-height: 32px;
+  padding-right: 8px;
+  background-color: $primary;
+  border-radius: $radius-md 0 0 $radius-md;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275 ;
+}
+
+#vol-icon.muted,
+#mic-icon.muted {
+  background-color: $surface-bright;
+}
+
+#vol-label-dash,
+#mic-label-dash,
+#brightness-label-dash {
+  color: $shadow;
+  font-size: 20px;
+  font-family: "Symbols Nerd Font Mono";
+}
+
+#vol-label-dash.muted,
+#mic-label-dash.muted {
+  color: $surface;
+}
+
+#mixer-section {
+  border-radius: $radius-xl;
+  border: 4px solid $surface;
+  padding: $spacing-xs;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#mixer-section-title {
+  font-weight: bold;
+  padding: $spacing-sm;
+  border: 2px solid $surface;
+  border-radius: $radius-md;
+}
+
+#mixer-content {
+  padding: 0 $spacing-sm;
+}
+
+#mixer-stream-label {
+  color: $outline;
+  font-weight: bold;
+}
+
+
+/* Volume & Mic Display CSS for Notch */
+
+#volume-progress-bar {
+  border-color: $magenta;
+  color: unquote("alpha($magenta, 0.3)") ;
+  background-color: transparent;
+}
+
+#volume-progress-bar label {
+  font-size: 12px;
+}
+
+
+#volume-progress-bar.volume-low,
+#volume-progress-bar.volume-low label {
+  border-color: $cyan;
+  color: $cyan;
+}
+
+#volume-progress-bar.volume-low {
+  color: unquote("alpha($cyan, 0.3)") ;
+}
+
+#volume-progress-bar.volume-medium,
+#volume-progress-bar.volume-medium label {
+  border-color: $blue;
+  color: $blue;
+}
+
+#volume-progress-bar.volume-medium {
+  color: unquote("alpha($blue, 0.3)") ;
+}
+
+#volume-progress-bar.volume-high,
+#volume-progress-bar.volume-high label {
+  border-color: $magenta;
+  color: $magenta;
+}
+
+#volume-progress-bar.volume-high {
+  color: unquote("alpha($magenta, 0.3)") ;
+}
+
+#volume-progress-bar.volume-muted,
+#volume-progress-bar.volume-muted label {
+  border-color: $outline;
+  color: $outline;
+}
+
+#volume-progress-bar.volume-muted {
+  color: unquote("alpha($outline, 0.2)") ;
+}
+
+
+progressbar,
+progressbar trough {
+  min-height: 2px;
+  background-color: unquote("alpha($outline, 0.3)") ;
+  border-radius: 2px;
+}
+
+progressbar progress {
+  min-height: 4px;
+  border-radius: 2px;
+  background-color: $magenta;
+}
+
+
+#volume-display-bar progress,
+#volume-display-box.volume-high progress {
+  background-color: $magenta;
+}
+
+#volume-display-box.volume-low progress {
+  background-color: $cyan;
+}
+
+#volume-display-box.volume-medium progress {
+  background-color: $blue;
+}
+
+#volume-display-box.volume-muted progress {
+  background-color: $outline;
+}
+
+
+#volume-icon-bar {
+  background-color: $shadow;
+  border-radius: $radius-sm;
+  padding: $spacing-xs $spacing-sm;
+  margin: 0px $spacing-xs;
+}
+
+#volume-icon-bar label {
+  font-size: 14px;
+  font-weight: 600;
+  color: $foreground;
+}
+
+#volume-icon-bar.volume-low label {
+  color: $cyan;
+}
+
+#volume-icon-bar.volume-medium label {
+  color: $blue;
+}
+
+#volume-icon-bar.volume-high label {
+  color: $magenta;
+}
+
+#volume-icon-bar.volume-muted label {
+  color: $outline;
+}
+
+/* ===== MIC PROGRESS BAR ===== */
+#mic-display-box.mic-active progress {
+  background-color: $secondary;
+}
+
+#mic-display-box.mic-muted progress {
+  background-color: $outline;
+}

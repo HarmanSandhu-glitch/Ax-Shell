@@ -10,6 +10,8 @@
 
 #overview-icon {
   background-color: var(--primary);
+  border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
 }
 
 #overview-client-box,
@@ -21,11 +23,14 @@
 
 #overview.show {
   animation: fadeIn 0.25s ease;
+
 }
 
 #overview-client-box {
   background-color: var(--shadow);
   border: 3px solid var(--surface);
+  border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
 }
 
 #overview-client-box:hover {
@@ -35,6 +40,8 @@
 #overview-client-box:focus {
   background-color: var(--surface);
   border: 3px solid var(--primary);
+  border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
 }
 
 #overview-client-box:active {
@@ -44,22 +51,29 @@
 
 #overview-workspace-bg {
   border-radius: 20px;
+  
 }
 
 #overview-workspace-box {
   padding: 4px;
   border: 2px solid var(--surface);
+    border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
 }
 
 #overview-add-label {
   font-size: 24px;
   color: var(--surface-bright);
+    border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
 }
 
 #overview-workspace-label {
   font-weight: bold;
   background-color: var(--surface);
-  border-radius: 10px;
+  border-radius: 40px;
   padding: 4px;
   margin-bottom: 4px;
+    border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
 }

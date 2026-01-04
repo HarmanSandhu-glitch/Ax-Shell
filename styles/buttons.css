@@ -3,6 +3,10 @@
 #bluetooth-button,
 #night-mode-button,
 #caffeine-button {
+  background-color: alpha(var(--secondary), 0.1);
+  border: 1px solid alpha(var(--outline), 0.1);
+  /* box-shadow: 0 2px 4px alpha(var(--shadow), 0.3); */
+  background-color: var(--surface);
   min-height: 52px;
   border-radius: 16px;
   transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);

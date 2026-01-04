@@ -1,0 +1,37 @@
+#button-bar,
+#bar-inner.dense,
+#bar-inner.edge,
+#bar-inner.edge.vertical,
+#bar-inner.edgecenter.vertical,
+#workspaces-container,
+#notch-content,
+#notch-box.panel,
+#date-time,
+#systray,
+#battery,
+#control-small,
+#notification-stack-box,
+#nav-button,
+#metrics-small,
+#weather,
+#language,
+#dock {
+  box-shadow: 0 0 3px unquote("alpha(black, 0.7 " ;
+
+}
+
+#notch-content.panel {
+  box-shadow: 0 0 3px unquote("alpha(black, 0 " ;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#bar-revealer {
+  padding: $spacing-md;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#boxed-revealer {
+  margin: calc($spacing-md * -1 ;
+}

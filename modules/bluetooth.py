@@ -10,15 +10,18 @@ import modules.icons as icons
 
 
 class BluetoothDeviceSlot(CenterBox):
-    def __init__(self, device: BluetoothDevice, **kwargs):
+    def __init__(self, device: BluetoothDevice, paired_box: Box, available_box: Box, **kwargs):
         super().__init__(name="bluetooth-device", **kwargs)
         self.device = device
+        self.paired_box = paired_box
+        self.available_box = available_box
         self.device.connect("changed", self.on_changed)
         self.device.connect(
             "notify::closed", lambda *_: self.device.closed and self.destroy()
         )
 
         self.connection_label = Label(name="bluetooth-connection", markup=icons.bluetooth_disconnected)
+        self.battery_label = Label(name="bluetooth-battery", visible=False)
         self.connect_button = Button(
             name="bluetooth-connect",
             label="Connect",
@@ -38,7 +41,7 @@ class BluetoothDeviceSlot(CenterBox):
                 ],
             )
         ]
-        self.end_children = self.connect_button
+        self.end_children = Box(spacing=6, children=[self.battery_label, self.connect_button])
 
         self.device.emit("changed")
 
@@ -58,7 +61,44 @@ class BluetoothDeviceSlot(CenterBox):
             self.connect_button.add_style_class("connected")
         else:
             self.connect_button.remove_style_class("connected")
+        self._ensure_correct_container()
+        self.update_battery_label()
         return
+
+    def _ensure_correct_container(self) -> None:
+        target = self.paired_box if self.device.paired else self.available_box
+        parent = self.get_parent()
+        if parent is target:
+            return
+        if parent and hasattr(parent, "remove"):
+            parent.remove(self)
+        target.add(self)
+
+    def update_battery_label(self) -> None:
+        if not self.device.connected:
+            self.battery_label.set_visible(False)
+            return
+        pct = self._get_battery_percentage()
+        if pct is None:
+            self.battery_label.set_visible(False)
+            return
+        pct = max(0, min(100, pct))
+        self.battery_label.set_visible(True)
+        self.battery_label.set_markup(f"{icons.battery} {pct:.0f}%")
+
+    def _get_battery_percentage(self):
+        # BluetoothDevice exposes battery-percentage / battery-level when available
+        for attr in ("battery_percentage", "battery_level"):
+            if hasattr(self.device, attr):
+                try:
+                    value = getattr(self.device, attr)
+                    value = value() if callable(value) else value
+                    if value is None:
+                        continue
+                    return float(value)
+                except Exception:
+                    continue
+        return None
 
 class BluetoothConnections(Box):
     def __init__(self, **kwargs):
@@ -68,6 +108,8 @@ class BluetoothConnections(Box):
             orientation="vertical",
             **kwargs,
         )
+
+        self._device_slots: list[BluetoothDeviceSlot] = []
 
         self.widgets = kwargs["widgets"]
 
@@ -104,7 +146,7 @@ class BluetoothConnections(Box):
 
         content_box = Box(spacing=4, orientation="vertical")
         content_box.add(self.paired_box)
-        content_box.add(Label(name="bluetooth-section", label="Available"))
+        content_box.add(Label(name="bluetooth-section", label="Ready to be paired"))
         content_box.add(self.available_box)
 
         self.children = [
@@ -130,10 +172,10 @@ class BluetoothConnections(Box):
     def status_label(self):
         print(self.client.enabled)
         if self.client.enabled:
-            self.bt_status_text.set_label("Enabled")
             for i in [self.bt_status_button, self.bt_status_text, self.bt_icon, self.bt_label, self.bt_menu_button, self.bt_menu_label]:
                 i.remove_style_class("disabled")
             self.bt_icon.set_markup(icons.bluetooth)
+            self.update_connected_status()
         else:
             self.bt_status_text.set_label("Disabled")
             for i in [self.bt_status_button, self.bt_status_text, self.bt_icon, self.bt_label, self.bt_menu_button, self.bt_menu_label]:
@@ -143,11 +185,34 @@ class BluetoothConnections(Box):
     def on_device_added(self, client: BluetoothClient, address: str):
         if not (device := client.get_device(address)):
             return
-        slot = BluetoothDeviceSlot(device)
+        slot = BluetoothDeviceSlot(device, self.paired_box, self.available_box)
+        self._device_slots.append(slot)
+        device.connect("changed", lambda *_: self.update_connected_status())
 
         if device.paired:
             return self.paired_box.add(slot)
         return self.available_box.add(slot)
+
+    def update_connected_status(self):
+        if not self.client.enabled:
+            self.bt_status_text.set_label("Disabled")
+            return
+
+        name = self._get_first_connected_name()
+        if name:
+            self.bt_status_text.set_label(name)
+        else:
+            self.bt_status_text.set_label("Enabled")
+
+    def _get_first_connected_name(self):
+        for box in (self.paired_box, self.available_box):
+            for child in box.get_children():
+                try:
+                    if isinstance(child, BluetoothDeviceSlot) and child.device.connected:
+                        return child.device.name
+                except Exception:
+                    continue
+        return None
 
     def update_scan_label(self):
         if self.client.scanning:

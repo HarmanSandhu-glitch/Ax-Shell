@@ -19,9 +19,13 @@
 @import url("./styles/power.css");
 @import url("./styles/shadows.css");
 @import url("./styles/tools.css");
+@import url("./styles/tracker.css");
 @import url("./styles/wallpapers.css");
 @import url("./styles/systemprofiles.css");
 @import url("./styles/workspaces.css");
+
+/* NOTE: GTK CSS doesn't support custom properties/variables in numeric positions. */
+/* Removed token usage to ensure compatibility. */
 
 * {
   all: unset;

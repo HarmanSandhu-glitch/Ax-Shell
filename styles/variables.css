@@ -1,0 +1,9 @@
+:vars {
+    /* Unified Radius Scale */
+    --radius-sm: 12px;
+    --radius-md: 20px;
+    --radius-lg: 40px;
+
+    /* Unified Border Sizing */
+    --border-width: 1px;
+}

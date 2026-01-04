@@ -2,23 +2,32 @@
 #network-header {
   border: 2px solid var(--surface);
   padding: 4px;
-  border-radius: 12px;
+  border-radius: 40px;
+  border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
+  background-color: alpha(var(--secondary), 0.1);
 }
 
 #bluetooth-device,
 #wifi-ap-slot {
   border: 2px solid var(--surface);
-  border-radius: 12px;
-  padding: 4px;
+  border-radius: 40px;
+  padding: 4px 4px 4px 16px;
+  border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
+  background-color: alpha(var(--secondary), 0.1);
+  margin-top: 4px;
 }
 
 #bluetooth-scan,
 #bluetooth-back,
 #network-refresh,
 #network-back {
-  background-color: var(--surface);
-  border-radius: 8px;
+  background-color: alpha(var(--secondary), 0.3);
+  border-radius: 40px;
   padding: 4px;
+  border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
 }
 
 #bluetooth-back-label,
@@ -46,8 +55,10 @@
 
 #bluetooth-section {
   background-color: var(--surface);
-  border-radius: 12px;
+  border-radius: 40px;
   padding: 8px;
+  border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
 }
 
 #bluetooth-connection {
@@ -57,9 +68,12 @@
 #bluetooth-connect,
 #wifi-connect-button {
   font-weight: bold;
-  background-color: var(--surface);
-  border-radius: 8px;
+  background-color: alpha(var(--secondary), 0.3);
+  border-radius: 40px;
   padding: 8px;
+  border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
+
 }
 
 #wifi-connect-button.connected {
@@ -87,6 +101,8 @@
   background-color: var(--surface);
   border-radius: 20px;
   padding: 4px;
+  border: 1px solid alpha(var(--outline), 0.2);
+  box-shadow: 0 0px 2px alpha(var(--outline), 0.3);
 }
 
 #bt-sep {
@@ -115,10 +131,12 @@
     background-color: var(--blue);
     color: var(--shadow);
   }
+
   50% {
     background-color: var(--shadow);
     color: var(--blue);
   }
+
   100% {
     background-color: var(--blue);
     color: var(--shadow);

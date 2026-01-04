@@ -1,0 +1,79 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#overview-icon {
+  background-color: $primary;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#overview-client-box,
+#overview-workspace-bg,
+#overview-frame {
+  border-radius: $radius-md;
+  transition: all 0.1s ease;
+}
+
+#overview.show {
+  animation: fadeIn 0.25s ease;
+
+}
+
+#overview-client-box {
+  background-color: $shadow;
+  border: 3px solid $surface;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#overview-client-box:hover {
+  background-color: $surface;
+}
+
+#overview-client-box:focus {
+  background-color: $surface;
+  border: 3px solid $primary;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#overview-client-box:active {
+  background-color: $surface-bright;
+  border: 3px solid $surface-bright;
+}
+
+#overview-workspace-bg {
+  border-radius: $radius-xl;
+  
+}
+
+#overview-workspace-box {
+  padding: $spacing-xs;
+  border: 2px solid $surface;
+    border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#overview-add-label {
+  font-size: 24px;
+  color: $surface-bright;
+    border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#overview-workspace-label {
+  font-weight: bold;
+  background-color: $surface;
+  border-radius: $radius-pill;
+  padding: $spacing-xs;
+  margin-bottom: $spacing-xs;
+    border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}

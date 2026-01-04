@@ -1,0 +1,154 @@
+#wallpaper-icons {
+  border-radius: $radius-xl;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275 ;
+}
+
+#wallpaper-icons:selected {
+  background-color: $outline;
+  border-radius: 0px;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#scheme-dropdown {
+  background-color: $surface;
+  padding: $spacing-sm;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+  border-radius: 0px $radius-pill $radius-pill 0px;
+}
+
+#scheme-dropdown>*>* {
+  font-weight: bold;
+  color: $shadow;
+}
+
+#scheme-dropdown.box button.box.cellview {
+  background-color: $primary;
+}
+
+#scheme-dropdown.box button.box.cellview:selected {
+  background-color: $surface-bright;
+}
+
+
+
+/* Customize the overall switch appearance */
+#matugen-switcher,
+#dnd-switch {
+  min-width: 40px;
+  min-height: 20px;
+  background-color: $surface;
+  border-radius: $radius-lg;
+  padding: $spacing-xs;
+  transition: background-color 0.3s ease;
+  border: 2px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 2px 4px unquote("alpha($shadow, 0.3)") ;
+
+
+}
+
+/* Style the switch's slider */
+#matugen-switcher slider,
+#dnd-switch slider {
+  background-color: $primary;
+  border-radius: $radius-lg;
+  min-width: 16px;
+  min-height: 8px;
+  transition:
+    background-color 0.1s cubic-bezier(0.5, 0.25, 0, 1.25 ,
+    transform 0.25s cubic-bezier(0.5, 0.25, 0, 1.25 ;
+}
+
+/* When the switch is active (checked  */
+#matugen-switcher:checked,
+#dnd-switch:checked {
+  background-color: $primary;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+/* Optional: additional styling for the slider when active */
+#matugen-switcher:checked slider,
+#dnd-switch:checked slider {
+  background-color: $shadow;
+}
+
+#matugen-switcher:checked image,
+#dnd-switch:checked image {
+  color: $shadow;
+}
+
+#mat-label {
+  font-size: 24px;
+  margin-left: 4px;
+}
+
+#custom-color-selector-box {
+  background-color: $surface;
+  border-radius: $radius-xl;
+  padding: $spacing-sm;
+}
+
+#hue-slider {
+  margin: 0 $spacing-xxl;
+}
+
+#hue-slider trough {
+  background-image: linear-gradient(to right,
+      #ff0000,
+      #ffff00,
+      #00ff00,
+      #00ffff,
+      #0000ff,
+      #ff00ff,
+      #ff0000 ;
+  border-radius: $radius-sm;
+  min-height: 8px;
+}
+
+#hue-slider slider {
+  min-height: 16px;
+  min-width: 8px;
+  margin: -10px 0;
+  background-color: $primary;
+  box-shadow: 0 0 4px unquote("alpha($shadow, 0.5)") ;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275 ;
+}
+
+#hue-slider slider:hover,
+#hue-slider slider:active {
+  background-color: $foreground;
+}
+
+#hue-slider slider:active {
+  min-height: 24px;
+  min-width: 8px;
+}
+
+#apply-color-button {
+  background-color: $primary;
+  color: $shadow;
+  border-radius: $radius-xl;
+  padding: $spacing-sm;
+  box-shadow: 0 0 4px unquote("alpha($shadow, 0.5)") ;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#apply-color-button:hover {
+  background-color: $foreground;
+}
+
+#apply-color-button:active {
+  background-color: $shadow;
+}
+
+#apply-color-label {
+  font-size: 16px;
+  color: $shadow;
+}
+
+#apply-color-button:active #apply-color-label {
+  color: $foreground;
+}

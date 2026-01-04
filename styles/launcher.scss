@@ -1,0 +1,183 @@
+#search-entry,
+#session-name-entry,
+#search-entry-walls {
+  font-weight: bold;
+  background-color: $surface;
+  color: $foreground;
+  border-radius: $radius-lg;
+  padding: $spacing-md;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#search-entry selection,
+#search-entry-walls selection,
+#session-name-entry selection {
+  color: $background;
+  background-color: $primary;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#close-button,
+#clear-button,
+#config-button,
+#new-session-button,
+#random-wall-button {
+  background-color: $surface;
+  border-radius: $radius-pill;
+  padding: $spacing-sm;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275 ;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#close-button:hover,
+#close-button:focus,
+#clear-button:hover,
+#clear-button:focus,
+#config-button:hover,
+#config-button:focus,
+#new-session-button:hover,
+#new-session-button:focus,
+#random-wall-button:hover {
+  background-color: $surface-bright;
+  border-radius: $radius-pill;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#close-button:active,
+#clear-button:active {
+  background-color: $red-dim;
+  border-radius: $radius-pill;
+}
+
+#close-label,
+#clear-label {
+  color: white;
+  font-size: 24px;
+}
+
+#close-button:active #close-label,
+#clear-button:active #clear-label {
+  color: $shadow;
+}
+
+#config-button:active,
+#new-session-button:active,
+#random-wall-button:active {
+  background-color: $primary;
+  border-radius: $radius-pill;
+}
+
+#config-label,
+#new-session-label,
+#random-wall-label {
+  color: $primary;
+  font-size: 24px;
+}
+
+#config-button:active #config-label,
+#new-session-button:active #new-session-label,
+#random-wall-button:active #random-wall-label {
+  color: $primary;
+}
+
+#scrolled-window {
+  border-radius: $radius-lg;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#scrolled-window scrollbar,
+#bluetooth-devices scrollbar,
+#network-ap-scrolled-window scrollbar {
+  border-radius: 50px;
+  background-color: $surface;
+  padding: $spacing-xs;
+  margin-left: 6px;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#scrolled-window slider,
+#bluetooth-devices slider,
+#network-ap-scrolled-window slider {
+  border-radius: 50px;
+  min-width: 16px;
+  min-height: 48px;
+  background-color: $primary;
+  border: 1px solid unquote("alpha($outline, 0.2)") ;
+  box-shadow: 0 0px 2px unquote("alpha($outline, 0.3)") ;
+}
+
+#slot-button {
+  border-radius: $radius-pill;
+  padding: 0 $spacing-lg;
+  animation: loadSlot 0.5s ease;
+  min-height: 52px;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275 ;
+}
+
+@keyframes loadSlot {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#slot-button:hover,
+#slot-button:focus,
+#slot-button:selected,
+#slot-button.selected {
+  border-radius: $radius-lg;
+  background-color: $surface;
+  padding-left: 20px;
+}
+
+#slot-button:active {
+  background-color: $primary;
+}
+
+#app-icon {
+  margin: -8px;
+  margin-right: 4px;
+
+}
+
+#app-label {
+  color: $foreground;
+  font-weight: bold;
+}
+
+#slot-button:hover #app-label,
+#slot-button:focus #app-label,
+#slot-button:selected #app-label,
+#slot-button.selected #app-label {
+  color: $primary;
+}
+
+#slot-button:active #app-label {
+  color: $shadow;
+}
+
+#tmux-icon,
+#clip-icon {
+  font-size: 20px;
+  color: $primary;
+
+}
+
+#app-desc {
+  color: $outline;
+  font-size: 12px;
+  font-style: italic;
+}
+
+#clip-label {
+  font-weight: bold;
+}
